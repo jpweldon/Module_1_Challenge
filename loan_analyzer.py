@@ -72,8 +72,10 @@ loan = {
 
 # @TODO: Use get() on the dictionary of additional information to extract the Future Value and Remaining Months on the loan.
 # Print each variable.
-# YOUR CODE HERE!
-
+future_value = loan.get("future_value")
+remaining_months = loan.get("remaining_months")
+print(future_value)
+print(remaining_months)
 
 # @TODO: Use the formula for Present Value to calculate a "fair value" of the loan.
 # Use a minimum required return of 20% as the discount rate.
