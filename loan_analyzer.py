@@ -130,8 +130,28 @@ present_value_print(loan)
 # @TODO: Write a conditional statement (an if-else statement) to decide if the present value represents the loan's fair value.
 #    If the present value of the loan is greater than or equal to the cost, then print a message that says the loan is worth at least the cost to buy it.
 #    Else, the present value of the loan is less than the loan cost, then print a message that says that the loan is too expensive and not worth the price.
-# YOUR CODE HERE!
 
+def loan_cost(loan_7):
+    lc = loan_7.get("loan_price")
+    return lc
+
+def loan_cost_print(loan_8):
+    lc_1 = loan_cost(loan_8)
+    print(f"The cost of the loan is ${lc_1: .2f}.")
+
+loan_cost_print(loan)
+
+def buy_nobuy_loan(loan_9):
+    if present_value(loan_9) >= loan_cost(loan_9):
+        print(f"The loan is worth at least the cost to buy it.")
+        #loan_cost_print(loan_9)
+        #present_value_print(loan_9)
+    else:
+        print(f"The loan is too expensive and not worth the price.")
+        #loan_cost_print(loan_9)
+        #present_value_print(loan_9)
+
+buy_nobuy_loan(loan)
 
 """Part 3: Perform Financial Calculations.
 
