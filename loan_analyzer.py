@@ -93,13 +93,23 @@ loan = {
 
 def future_value(loan_1):
     fv = loan_1.get("future_value")
-    print(f"The future value of the loan is ${fv: .2f}.")
-future_value(loan)
+    return fv
 
-def remaining_months(loan_2):
-    rm = loan_2.get("remaining_months")
-    print(f"The months remaining on the loan is {rm} months.")
-remaining_months(loan)
+def future_value_1(loan_2):
+    fv_1 = future_value(loan_2)
+    print(f"The future value of the loan is ${fv_1: .2f}.")
+
+future_value_1(loan)
+
+def remaining_months(loan_3):
+    rm = loan_3.get("remaining_months")
+    return rm
+
+def remaining_months_1(loan_4):
+    rm_1 = remaining_months(loan_4)
+    print(f"The months remaining on the loan is {rm_1} months.")
+
+remaining_months_1(loan)
 
 # @TODO: Use the formula for Present Value to calculate a "fair value" of the loan.
 # Use a minimum required return of 20% as the discount rate.
