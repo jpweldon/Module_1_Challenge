@@ -1,6 +1,6 @@
 # coding: utf-8
-import csv
-from pathlib import Path
+import csv # I want to import the csv library.
+from pathlib import Path # I want the Path function from the pathlib library.
 
 """Part 1: Automate the Calculations.
 
@@ -263,4 +263,9 @@ output_path = Path("inexpensive_loans.csv")
 
 # @TODO: Use the csv library and `csv.writer` to write the header row
 # and each row of `loan.values()` from the `inexpensive_loans` list.
-# YOUR CODE HERE!
+with open(output_path, 'w', newline='') as csvfile:
+    csvwriter = csv.writer(csvfile)
+    csvwriter.writerow(header) # I am writing the header first.
+    for loan in inexpensive_loans:
+        csvwriter.writerow(loan.values()) # I am writing the inexpensive loans rows.
+
